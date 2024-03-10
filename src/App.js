@@ -1,8 +1,14 @@
 import "./App.css";
-
+import Header from "./components/Header";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
 function App() {
   return (
-    <h1 className="text-2xl text-center text-red-500">tbc-react-project</h1>
+    <>
+      <Header />
+      <Content />
+      <Footer />
+    </>
   );
 }
 
