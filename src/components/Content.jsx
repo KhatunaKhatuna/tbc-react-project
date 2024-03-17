@@ -1,9 +1,11 @@
 import Search from "./Search";
+import Prodacts from "./Prodacts";
 
 export default function Content() {
   return (
-    <main className="bg-[rgb(14,14,14)]">
+    <main className="">
       <Search />
+      <Prodacts />
     </main>
   );
 }
