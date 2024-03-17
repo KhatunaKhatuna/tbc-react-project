@@ -1,7 +1,7 @@
-export default function Navigation() {
+export default function Navigation({ style }) {
   return (
     <nav className="">
-      <ul className="flex text-[#fddddd] gap-5 text-xl font-medium">
+      <ul className={"flex text-[#fdf2e9] gap-5 text-lg font-medium " + style}>
         <li>
           <a href="#" className="hover:text-[#6B72FE] transition duration-300">
             Home
@@ -10,11 +10,6 @@ export default function Navigation() {
         <li>
           <a href="#" className="hover:text-[#6B72FE] transition duration-300">
             Products
-          </a>
-        </li>
-        <li>
-          <a href="#" className="hover:text-[#6B72FE] transition duration-300">
-            About
           </a>
         </li>
         <li>

@@ -7,12 +7,12 @@ export default function Search() {
     <section className="flex justify-center p-[3rem]">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-[30rem] bg-[rgb(255,255,255)]/10 flex items-center py-[10px] px-[20px] rounded-full "
+        className="w-full max-w-[30rem] bg-[#fdf2e9]/10 flex items-center py-[0.8rem] px-[1.6rem] rounded-full "
       >
         <input
           type="text"
           placeholder="Search ..."
-          className="focus:border-transparent focus:outline-none bg-transparent text-[#fddddd] text-lg w-full placeholder:text-[#fddddd]"
+          className="focus:border-transparent focus:outline-none bg-transparent text-[#fdf2e9] text-lg w-full placeholder:text-[#fdf2e9]"
         />
         <button className="w-8 h-8 group">
           <svg

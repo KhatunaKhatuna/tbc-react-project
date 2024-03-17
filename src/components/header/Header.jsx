@@ -7,7 +7,7 @@ export default function Header() {
         <a href="/">
           <img className="h-12" src={logo} alt="logo" />
         </a>
-        <Navigation />
+        <Navigation style="flex-row" />
       </div>
     </header>
   );
