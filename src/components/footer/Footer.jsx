@@ -5,14 +5,14 @@ export default function Footer() {
 
   return (
     <footer className="bg-[rgb(25,25,25)]/95 lg:sticky lg:bottom-0 lg:z-10 text-[#fdf2e9]">
-      <div className=" max-w-[90%] my-0 mx-auto py-[2rem] grid  grid-cols-1 lg:grid-cols-2 justify-items-center gap-8 ">
+      <div className=" max-w-[90%] my-0 mx-auto py-[1rem] grid  grid-cols-1 lg:grid-cols-2 justify-items-center gap-8 ">
         <div className="w-full max-w-[30rem] order-2 lg:order-1 lg:justify-self-start">
           <div className="flex  gap-5 justify-between lg:justify-normal lg:gap-32 flex-row ">
-            <ul className="flex flex-col text-[#fdf2e9] gap-3 text-base font-medium">
+            <ul className="flex flex-col gap-4 text-lg text-[#fdf2e9]   font-medium">
               <li>
                 <a
                   href="#"
-                  className="hover:text-[#6B72FE] transition duration-300"
+                  className="hover:text-[#5262ac] transition duration-300"
                 >
                   React Accelerator {year}
                 </a>
@@ -20,7 +20,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-[#6B72FE] transition duration-300"
+                  className="hover:text-[#5262ac] transition duration-300"
                 >
                   Privacy & Policy
                 </a>
@@ -28,17 +28,19 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-[#6B72FE] transition duration-300"
+                  className="hover:text-[#5262ac] transition duration-300"
                 >
                   Terms
                 </a>
               </li>
             </ul>
-            <Navigation style="flex-col gap-3 text-base" />
+            <Navigation style="flex-col " />
           </div>
         </div>
-        <div className=" order-1 lg:order-2 flex justify-center items-center lg:justify-self-end">
-          <form className="bg-[#fdf2e9] w-full max-w-[30rem] flex items-center py-[0.4rem]  pl-[1.6rem]  pr-[0.6rem] rounded-full gap-3">
+        <div className=" order-1 lg:order-2 flex flex-col justify-center items-center lg:justify-self-end">
+          <p>RECEIVE THE LATEST NEWS & RESEARCH</p>
+
+          <form className="bg-[#fdf2e9] w-full max-w-[30rem] flex items-center py-[0.2rem]  pl-[1.6rem]  pr-[0.6rem] rounded-full gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

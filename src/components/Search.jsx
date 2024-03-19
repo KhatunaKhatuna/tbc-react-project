@@ -7,7 +7,7 @@ export default function Search() {
     <section className="flex justify-center p-[3rem]">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-[30rem] bg-[#fdf2e9]/10 flex items-center py-[0.8rem] px-[1.6rem] rounded-full "
+        className="w-full max-w-[30rem] bg-[#fdf2e9]/10 flex items-center py-[0.6rem] px-[1.6rem] rounded-full "
       >
         <input
           type="text"

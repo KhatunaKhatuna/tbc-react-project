@@ -1,17 +1,18 @@
 export function Card({ card: { logo, description, title } }) {
   return (
-    <div className="bg-[#16171E] rounded-[10px]">
+    <div className="bg-[#16171E] rounded-[10px] cursor-pointer hover:bg-[#222639] hover:scale-105  transition duration-300 ease-linear snap-start">
       <img src={logo} />
+
       <div className="text-[#fdf2e9] text-base flex flex-col justify-center gap-4 items-center max-w-[90%] my-0 mx-auto pt-4 pb-8">
-        <p>{title}</p>
+        <p className="text-[24px]">{title}</p>
         <p> {description}</p>
-        <button className="flex justify-center gap-3 items-center bg-[#2D2E35] w-full   py-[0.6rem] px-[1.6rem] rounded-full text-xl group hover:bg-[#6B72FE] hover:text-[#0e0e0e]">
+        <button className="flex justify-center gap-3 items-center bg-[#2D2E35] w-full   py-[0.6rem] px-[1.6rem] rounded-full text-[24px] text-[#5262ac] group hover:bg-[#6B72FE]  hover:text-[#0e0e0e] ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="2.5"
-            stroke="currentColor"
+            stroke="#5262ac"
             className="w-6 h-6 group-hover:stroke-[#0e0e0e]"
           >
             <path
