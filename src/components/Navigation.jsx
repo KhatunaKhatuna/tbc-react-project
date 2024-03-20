@@ -1,21 +1,29 @@
+import { Link } from "react-router-dom";
+
 export default function Navigation({ style }) {
   return (
     <nav className="">
       <ul className={"flex text-[#fdf2e9] gap-4 text-lg font-medium " + style}>
         <li>
-          <a href="#" className="hover:text-[#5262ac] transition duration-300">
+          <Link to="/" className="hover:text-[#5262ac] transition duration-300">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="hover:text-[#5262ac] transition duration-300">
+          <Link
+            to="/products"
+            className="hover:text-[#5262ac] transition duration-300"
+          >
             Products
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="hover:text-[#5262ac] transition duration-300">
+          <Link
+            to="contact"
+            className="hover:text-[#5262ac] transition duration-300"
+          >
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

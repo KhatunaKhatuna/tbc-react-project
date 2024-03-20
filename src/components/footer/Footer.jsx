@@ -10,16 +10,13 @@ export default function Footer() {
           <div className="flex  gap-5 justify-between lg:justify-normal lg:gap-32 flex-row ">
             <ul className="flex flex-col gap-4 text-lg text-[#fdf2e9]   font-medium">
               <li>
-                <a
-                  href="#"
-                  className="hover:text-[#5262ac] transition duration-300"
-                >
+                <span className="hover:text-[#5262ac] transition duration-300">
                   React Accelerator {year}
-                </a>
+                </span>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="hover:text-[#5262ac] transition duration-300"
                 >
                   Privacy & Policy
@@ -27,7 +24,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="hover:text-[#5262ac] transition duration-300"
                 >
                   Terms
