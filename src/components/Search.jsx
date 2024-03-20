@@ -11,8 +11,12 @@ export default function Search() {
       >
         <input
           type="text"
+          name="search"
           placeholder="Search ..."
           className="focus:border-transparent focus:outline-none bg-transparent text-[#fdf2e9] text-lg w-full placeholder:text-[#fdf2e9]"
+          autoCapitalize="none"
+          autoComplete="off"
+          spellCheck="false"
         />
         <button className="w-8 h-8 group">
           <svg

@@ -2,9 +2,9 @@ import logo from "../../../logo.svg";
 export default function Contact() {
   return (
     <section className="text-[#fdf2e9] flex-1 ">
-      <div className="max-w-[90%] my-0 mx-auto flex flex-col gap-20 pt-[3rem]">
+      <div className="max-w-[90%] my-0 mx-auto flex flex-col gap-20 pt-[3rem] pb-[3rem]">
         <h2 className="text-[2.5rem]">Get in touch</h2>
-        <div className="grid gap-10 grid-cols-2 ">
+        <div className="grid gap-16 md:gap-10 grid-cols-1 md:grid-cols-2 ">
           <div className=" flex flex-col gap-5 justify-self-center">
             <div className="flex gap-5 group">
               <svg
@@ -77,7 +77,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <form className=" grid gap-4 grid-cols-2 max-w-[80%] justify-self-end">
+          <form className=" grid gap-4 grid-cols-2 max-w-[80%] justify-self-center md:justify-self-end">
             <input
               className="w-full p-3 text-[#0e0e0e]/95 rounded-[5px]  col-span-2 md:col-span-1 focus:border-[#6B72FE] focus:outline-[#6B72FE]"
               type="text"

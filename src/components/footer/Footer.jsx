@@ -8,7 +8,7 @@ export default function Footer() {
       <div className=" max-w-[90%] my-0 mx-auto py-[1rem] grid  grid-cols-1 lg:grid-cols-2 justify-items-center gap-8 ">
         <div className="w-full max-w-[30rem] order-2 lg:order-1 lg:justify-self-start">
           <div className="flex  gap-5 justify-between lg:justify-normal lg:gap-32 flex-row ">
-            <ul className="flex flex-col gap-4 text-lg text-[#fdf2e9]   font-medium">
+            <ul className="flex flex-col gap-[2px] text-lg  text-[16px] text-[#fdf2e9]   font-medium">
               <li>
                 <span className="hover:text-[#5262ac] transition duration-300">
                   React Accelerator {year}
@@ -31,7 +31,7 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-            <Navigation style="flex-col " />
+            <Navigation style="flex-col gap-[2px] text-[16px]" />
           </div>
         </div>
         <div className=" order-1 lg:order-2 flex flex-col justify-center items-center lg:justify-self-end">
@@ -53,8 +53,12 @@ export default function Footer() {
 
             <input
               type="email"
+              name="email"
               required
               className="focus:border-transparent focus:outline-none bg-transparent text-[#0e0e0e]/95 text-lg w-full"
+              autoCapitalize="none"
+              autoComplete="off"
+              spellCheck="false"
               placeholder="Enter your email"
             />
             <button className=" bg-[#6B72FE]  text-nowrap py-[0.6rem] px-[1.6rem] rounded-full hover:bg-[#333B61]">
