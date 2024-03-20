@@ -8,7 +8,7 @@ import Contact from "./components/pages/contact/Contact";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-[#0e0e0e] ">
+    <div className="min-h-screen flex flex-col bg-[#0e0e0e] ">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

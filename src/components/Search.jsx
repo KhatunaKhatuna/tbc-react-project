@@ -4,7 +4,7 @@ export default function Search() {
   }
 
   return (
-    <section className="flex justify-center p-[3rem]">
+    <section className="flex justify-center p-[3rem] pb-0">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-[30rem] bg-[#fdf2e9]/10 flex items-center py-[0.6rem] px-[1.6rem] rounded-full "

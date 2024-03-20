@@ -35,8 +35,6 @@ export default function Footer() {
           </div>
         </div>
         <div className=" order-1 lg:order-2 flex flex-col justify-center items-center lg:justify-self-end">
-          <p>RECEIVE THE LATEST NEWS & RESEARCH</p>
-
           <form className="bg-[#fdf2e9] w-full max-w-[30rem] flex items-center py-[0.2rem]  pl-[1.6rem]  pr-[0.6rem] rounded-full gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +57,7 @@ export default function Footer() {
               className="focus:border-transparent focus:outline-none bg-transparent text-[#0e0e0e]/95 text-lg w-full"
               placeholder="Enter your email"
             />
-            <button className=" bg-[#6B72FE]  text-nowrap py-[0.6rem] px-[1.6rem] rounded-full">
+            <button className=" bg-[#6B72FE]  text-nowrap py-[0.6rem] px-[1.6rem] rounded-full hover:bg-[#333B61]">
               Get Updates
             </button>
           </form>
