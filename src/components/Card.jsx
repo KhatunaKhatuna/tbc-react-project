@@ -1,7 +1,7 @@
 export function Card({ card: { logo, description, title } }) {
   return (
     <div className="bg-[#16171E] rounded-[10px] cursor-pointer hover:bg-[#222639] hover:scale-105  transition duration-300 ease-linear snap-start">
-      <img src={logo} />
+      <img src={logo} alt="logo" />
 
       <div className="text-[#fdf2e9] text-base flex flex-col justify-center gap-4 items-center max-w-[90%] my-0 mx-auto pt-4 pb-8">
         <p className="text-[24px]">{title}</p>

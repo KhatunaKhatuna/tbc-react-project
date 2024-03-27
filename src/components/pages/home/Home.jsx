@@ -1,13 +1,13 @@
 import Search from "../../Search";
 import Prodacts from "../products/Products";
-import Blog from "../../Blog";
+import Blog from "../blog/Blog";
 
 export default function Home() {
   return (
     <main className="">
       <Search />
       <Prodacts />
-      <Blog />
+      <Blog quantity={5} />
     </main>
   );
 }
