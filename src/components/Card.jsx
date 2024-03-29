@@ -5,7 +5,7 @@ export function Card({ card: { logo, description, title } }) {
 
       <div className="text-[#fdf2e9] text-base flex flex-col justify-center gap-4 items-center max-w-[90%] my-0 mx-auto pt-4 pb-8">
         <p className="text-[24px]">{title}</p>
-        <p> {description}</p>
+        <p className="flex-1 min-h-[50px]"> {description}</p>
         <button className="flex justify-center gap-3 items-center bg-[#2D2E35] w-full   py-[0.6rem] px-[1.6rem] rounded-full text-[24px] text-[#5262ac] group hover:bg-[#6B72FE]  hover:text-[#0e0e0e] ">
           <svg
             xmlns="http://www.w3.org/2000/svg"

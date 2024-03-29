@@ -1,11 +1,8 @@
-import { useState } from "react";
-
 export default function Search({
   isSorted,
   setIsSorted,
   setSearchQuery,
   searchQuery,
-  setIsResults,
 }) {
   function handleSubmit(e) {
     e.preventDefault();
@@ -18,7 +15,7 @@ export default function Search({
     setSearchQuery((prev) => (prev = e.target.value));
   }
   return (
-    <section className="flex justify-center  gap-10 p-[3rem] pb-0">
+    <section className="flex flex-col md:flex-row items-center justify-center gap-10 p-[3rem] pb-0">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-[30rem] bg-[#fdf2e9]/10 flex  items-center py-[0.6rem] px-[1.6rem] rounded-full "

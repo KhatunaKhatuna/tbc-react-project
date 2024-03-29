@@ -6,7 +6,6 @@ import { useState } from "react";
 export default function Home() {
   const [isSorted, setIsSorted] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [isResults, setIsResults] = useState(true);
 
   return (
     <main className="">
@@ -15,13 +14,8 @@ export default function Home() {
         setIsSorted={setIsSorted}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
-        setIsResults={setIsResults}
       />
-      <Prodacts
-        isSorted={isSorted}
-        searchQuery={searchQuery}
-        isResults={isResults}
-      />
+      <Prodacts isSorted={isSorted} searchQuery={searchQuery} />
       <Blog quantity={5} />
     </main>
   );

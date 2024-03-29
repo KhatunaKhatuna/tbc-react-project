@@ -149,16 +149,16 @@ const cards = [
   },
 ];
 
-export default function Products({ isSorted, searchQuery, isResults }) {
+export default function Products({ isSorted, searchQuery }) {
   const location = useLocation();
 
   // Sort by title
-  let sortedCards;
-  sortedCards = isSorted
+  let newCards;
+  newCards = isSorted
     ? cards.slice().sort((a, b) => a.title.localeCompare(b.title))
     : cards;
   // Filter by searchQuery
-  sortedCards = sortedCards.filter((product) =>
+  newCards = newCards.filter((product) =>
     product.title.toLowerCase().startsWith(searchQuery.toLowerCase())
   );
 
@@ -173,12 +173,12 @@ export default function Products({ isSorted, searchQuery, isResults }) {
       {/* Horisontal scroll */}
       {/* <div className="grid grid-flow-col auto-cols-[90%] md:auto-cols-[45%] lg:auto-cols-[35%] xl:auto-cols-[23%] gap-5 max-w-[90%] my-0 mx-auto pb-[2rem] overflow-x-auto snap-x snap-mandatory overscroll-x-contain"> */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8  max-w-[90%] my-0 mx-auto">
-        {sortedCards.length === 0 ? (
-          <p className="text-[#fdf2e9] text-[2rem] col-start-2">
+        {newCards.length === 0 ? (
+          <p className="text-[#fdf2e9] text-[2rem] col-span-full justify-self-center">
             No results found
           </p>
         ) : (
-          sortedCards.map((card) => <Card key={card.id} card={card} />)
+          newCards.map((card) => <Card key={card.id} card={card} />)
         )}
       </div>
     </section>
