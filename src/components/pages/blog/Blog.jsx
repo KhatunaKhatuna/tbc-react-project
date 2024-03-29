@@ -7,7 +7,7 @@ export default function Blog({ quantity = 20 }) {
 
   const articles = [];
   const text =
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut possimus necessitatibus error neque ex ipsa repudiandae debitis maxime laboriosam non vero culpa nisi illum ad sapiente, laudantium iste iureEaque.";
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut possimus necessitatibus error neque ex ipsa repudiandae debitis maxime laboriosam non vero culpa nisi illum ad sapiente, laudantium iste iureEaque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut possimus necessitatibus error neque ex ipsa repudiandae debitis maxime laboriosam non vero culpa nisi illum ad sapiente, laudantium iste iureEaque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut possimus necessitatibus error neque ex ipsa repudiandae debitis maxime laboriosam non vero culpa nisi illum ad sapiente, laudantium iste iureEaque.";
 
   for (let index = 1; index <= quantity; index++) {
     articles.push({
