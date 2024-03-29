@@ -1,15 +1,31 @@
-export default function Search() {
+import { useState } from "react";
+
+export default function Search({
+  isSorted,
+  setIsSorted,
+  setSearchQuery,
+  searchQuery,
+  setIsResults,
+}) {
   function handleSubmit(e) {
     e.preventDefault();
   }
+  function handleClick() {
+    setIsSorted((prev) => !prev);
+  }
 
+  function handleChange(e) {
+    setSearchQuery((prev) => (prev = e.target.value));
+  }
   return (
-    <section className="flex justify-center p-[3rem] pb-0">
+    <section className="flex justify-center  gap-10 p-[3rem] pb-0">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-[30rem] bg-[#fdf2e9]/10 flex items-center py-[0.6rem] px-[1.6rem] rounded-full "
+        className="w-full max-w-[30rem] bg-[#fdf2e9]/10 flex  items-center py-[0.6rem] px-[1.6rem] rounded-full "
       >
         <input
+          value={searchQuery}
+          onChange={handleChange}
           type="text"
           name="search"
           placeholder="Search ..."
@@ -18,23 +34,13 @@ export default function Search() {
           autoComplete="off"
           spellCheck="false"
         />
-        <button className="w-8 h-8 group">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="2.5"
-            stroke="#fddddd"
-            className="w-8 h-8 group-hover:stroke-[#6B72FE]"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-            />
-          </svg>
-        </button>
       </form>
+      <button
+        onClick={handleClick}
+        className=" text-[#fdf2e9] bg-[#fdf2e9]/10 py-[0.6rem] px-[1.6rem] rounded-full w-[150px]"
+      >
+        {isSorted ? "Reset" : "Sort by title"}
+      </button>
     </section>
   );
 }
