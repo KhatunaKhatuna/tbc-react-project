@@ -11,9 +11,12 @@ export default function Search({
     setIsSorted((prev) => !prev);
   }
 
+  const pattern = /[^a-zA-Z0-9]/g;
+  // set search query
   function handleChange(e) {
-    setSearchQuery((prev) => (prev = e.target.value));
+    setSearchQuery((prev) => (prev = e.target.value).replace(pattern, ""));
   }
+
   return (
     <section className="flex flex-col md:flex-row items-center justify-center gap-10 p-[3rem] pb-0">
       <form

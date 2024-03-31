@@ -150,7 +150,7 @@ const cards = [
   },
 ];
 
-export default function Products({ isSorted, searchQuery }) {
+export default function Products({ isSorted = false, searchQuery = "" }) {
   const location = useLocation();
   const debouncedSearchQuery = useDebounce(searchQuery, 1000);
   // Sort by title
@@ -158,11 +158,12 @@ export default function Products({ isSorted, searchQuery }) {
   newCards = isSorted
     ? cards.slice().sort((a, b) => a.title.localeCompare(b.title))
     : cards;
+
   // Filter by searchQuery
   newCards = newCards.filter((product) =>
-    product.title.toLowerCase().startsWith(debouncedSearchQuery.toLowerCase())
+    product.title.toLowerCase().includes(debouncedSearchQuery.toLowerCase())
   );
-  console.log(debouncedSearchQuery);
+
   return (
     <section className="mb-[3rem] mt-[3rem]">
       {location.pathname === "/products" ? (
