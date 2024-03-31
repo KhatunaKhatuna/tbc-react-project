@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import logo from "../../../logo.svg";
 import { Card } from "../../Card";
+import useDebounce from "../../../hooks/useDebounce";
 
 const cards = [
   {
@@ -151,7 +152,7 @@ const cards = [
 
 export default function Products({ isSorted, searchQuery }) {
   const location = useLocation();
-
+  const debouncedSearchQuery = useDebounce(searchQuery, 1000);
   // Sort by title
   let newCards;
   newCards = isSorted
@@ -159,9 +160,9 @@ export default function Products({ isSorted, searchQuery }) {
     : cards;
   // Filter by searchQuery
   newCards = newCards.filter((product) =>
-    product.title.toLowerCase().startsWith(searchQuery.toLowerCase())
+    product.title.toLowerCase().startsWith(debouncedSearchQuery.toLowerCase())
   );
-
+  console.log(debouncedSearchQuery);
   return (
     <section className="mb-[3rem] mt-[3rem]">
       {location.pathname === "/products" ? (
