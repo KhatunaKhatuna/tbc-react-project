@@ -1,4 +1,5 @@
-import Navigation from "../Navigation";
+import Navigation from "./Navigation";
+import Link from "next/link";
 export default function Footer() {
   const date = new Date();
   const year = date.getFullYear();
@@ -15,20 +16,20 @@ export default function Footer() {
                 </span>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  href="#"
                   className="hover:text-[#5262ac] transition duration-300"
                 >
                   Privacy & Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  href="#"
                   className="hover:text-[#5262ac] transition duration-300"
                 >
                   Terms
-                </a>
+                </Link>
               </li>
             </ul>
             <Navigation style="flex-col gap-[2px] text-[16px]" />

@@ -1,7 +1,11 @@
 # Set up the project
 
 ```
-cd tbc-react-project
+git clone git@github.com:KhatunaKhatuna/tbc-react-project.git
+```
+
+```
+cd tbc-react-accelerartor
 ```
 
 ```
@@ -9,5 +13,9 @@ npm install
 ```
 
 ```
-npm start
+npm run dev
 ```
+
+If port 3000 is not busy you can open the project in your browser using the following [next-app](http://localhost:3000/) link
+
+## Happy Coding !!!

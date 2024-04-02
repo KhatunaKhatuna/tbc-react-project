@@ -1,10 +1,7 @@
-import Article from "../../Article";
-import { useLocation } from "react-router-dom";
-import logo from "../../../logo.svg";
+"use client";
+import Article from "@/components/Article";
 
 export default function Blog({ quantity = 20 }) {
-  const location = useLocation();
-
   const articles = [];
   const text =
     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut possimus necessitatibus error neque ex ipsa repudiandae debitis maxime laboriosam non vero culpa nisi illum ad sapiente, laudantium iste iureEaque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut possimus necessitatibus error neque ex ipsa repudiandae debitis maxime laboriosam non vero culpa nisi illum ad sapiente, laudantium iste iureEaque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut possimus necessitatibus error neque ex ipsa repudiandae debitis maxime laboriosam non vero culpa nisi illum ad sapiente, laudantium iste iureEaque.";
@@ -28,14 +25,13 @@ export default function Blog({ quantity = 20 }) {
               text={article.text}
               title={article.title}
               creatDate={"28.03.2024"}
-              image={logo}
+              image="/logo.svg"
             />
           ))}
-          {location.pathname === "/" ? (
-            <button className=" border-0 bg-[#6B72FE] py-1.5 px-6 mx-auto text-[#fdf2e9] lg:text-[20px] rounded-[5px] hover:bg-[#333B61] transition-all transform duration-300 ease-linear ">
-              Load More
-            </button>
-          ) : null}
+
+          <button className=" border-0 bg-[#6B72FE] py-1.5 px-6 mx-auto text-[#fdf2e9] lg:text-[20px] rounded-[5px] hover:bg-[#333B61] transition-all transform duration-300 ease-linear ">
+            Load More
+          </button>
         </div>
       </div>
     </section>

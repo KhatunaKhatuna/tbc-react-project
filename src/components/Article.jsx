@@ -1,4 +1,5 @@
 import TextExpander from "./TextExpander";
+import Image from "next/image";
 
 export default function Article({ title, text, creatDate, image }) {
   return (
@@ -7,7 +8,13 @@ export default function Article({ title, text, creatDate, image }) {
         <span className=" hover:text-[#6B72FE] ">{title}</span>
       </p>
       <div className="flex gap-5 items-center justify-center py-4">
-        <img src={image} alt="logo" className="h-[7rem]" />
+        <Image
+          src={image}
+          alt="logo"
+          className="h-[7rem] "
+          width={500}
+          height={500}
+        />
         <div className="flex flex-col gap-3 text-[#fdf2e9]">
           <span>{creatDate}</span>
           {/* <p className="text-[1.3rem]   pb-4">{text}</p> */}

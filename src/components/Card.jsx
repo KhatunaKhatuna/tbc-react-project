@@ -1,7 +1,9 @@
-export function Card({ card: { logo, description, title } }) {
+import Image from "next/image";
+
+export default function Card({ card: { description, title } }) {
   return (
     <div className="bg-[#16171E] rounded-[10px] cursor-pointer hover:bg-[#222639] hover:scale-105  transition duration-300 ease-linear snap-start">
-      <img src={logo} alt="logo" />
+      <Image src="/logo.svg" alt="logo" width={300} height={300} />
 
       <div className="text-[#fdf2e9] text-base flex flex-col justify-center gap-4 items-center max-w-[90%] my-0 mx-auto pt-4 pb-8">
         <p className="text-[24px]">{title}</p>
