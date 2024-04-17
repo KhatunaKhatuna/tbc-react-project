@@ -24,7 +24,7 @@ export default async function LoginPage() {
     await login(username, password);
   };
   return (
-    <div className="w-full h-[100vh] flex justify-center items-center">
+    <div className="h-[100vh] ">
       <LoginForm handleLogin={handleLogin} />
       {message ? <LoginErrorMessage /> : ""}
     </div>
