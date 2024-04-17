@@ -1,14 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Card({ card: { description, title } }) {
+export default function Card({ card: { id, description, title, images } }) {
+  const img = images[0];
   return (
-    <div className="bg-[#16171E] rounded-[10px] cursor-pointer hover:bg-[#222639] hover:scale-105  transition duration-300 ease-linear snap-start">
-      <Image src="/logo.svg" alt="logo" width={300} height={300} />
+    <Link href={"/products/" + id}>
+      <div className="h-full overflow-hidden text-[#fdf2e9] text-base flex flex-col  justify-center gap-5 items-center pb-8 bg-[#16171E] rounded-[10px] cursor-pointer hover:bg-[#222639] hover:scale-105  transition duration-300 ease-linear snap-start">
+        <div className="h-[200px] w-full">
+          <Image
+            src={img}
+            alt="logo"
+            width="500"
+            height="500"
+            className=" h-full w-full object-cover"
+          />
+        </div>
 
-      <div className="text-[#fdf2e9] text-base flex flex-col justify-center gap-4 items-center max-w-[90%] my-0 mx-auto pt-4 pb-8">
-        <p className="text-[24px]">{title}</p>
-        <p className="flex-1 min-h-[50px]"> {description}</p>
-        <button className="flex justify-center gap-3 items-center bg-[#2D2E35] w-full   py-[0.6rem] px-[1.6rem] rounded-full text-[24px] text-[#5262ac] group hover:bg-[#6B72FE]  hover:text-[#0e0e0e] ">
+        <p className="text-[24px] px-5 ">{title}</p>
+        <p className="px-5"> {description}</p>
+        <button className="flex justify-center mt-auto w-[90%] gap-3 items-center bg-[#2D2E35] py-[0.6rem] px-[1.6rem] rounded-full text-[24px] text-[#5262ac] group hover:bg-[#6B72FE]  hover:text-[#0e0e0e] ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -26,6 +36,6 @@ export default function Card({ card: { description, title } }) {
           Edd to cart
         </button>
       </div>
-    </div>
+    </Link>
   );
 }
