@@ -31,7 +31,7 @@ export default function Profile() {
   console.log(form);
   return (
     <section className="text-[#fdf2e9]  flex-1 flex  justify-center items-center ">
-      <div className="flex gap-5 flex-col justify-center items-center max-w-[90%] my-0 mx-auto">
+      <div className="flex gap-5 flex-col justify-center items-center max-w-[80%] my-0 mx-auto">
         <div className="bg-[#2D2E35] px-[2rem] py-[1rem] rounded-3xl">
           <h2 className="text-[2rem] leading-[25px] text-center pb-[1rem] ">
             Edit Your Profile Data

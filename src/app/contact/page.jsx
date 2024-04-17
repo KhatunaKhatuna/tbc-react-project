@@ -42,8 +42,8 @@ export default function Contact() {
   }
 
   return (
-    <section className="text-[#fdf2e9] flex-1 ">
-      <div className="max-w-[90%] my-0 mx-auto flex flex-col gap-20 pt-[3rem] pb-[3rem]">
+    <section className="text-[#fdf2e9]">
+      <div className="max-w-[80%] my-0 mx-auto flex flex-col gap-20 pt-[3rem] pb-[3rem]">
         <h2 className="text-[2.5rem]">Get in touch</h2>
         <div className="grid gap-16 md:gap-10 grid-cols-1 lg:grid-cols-2 ">
           <div className=" flex flex-col gap-5 justify-self-center">

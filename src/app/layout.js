@@ -13,13 +13,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={inter.className + " min-h-screen flex flex-col bg-[#0e0e0e]"}
+        className={`${inter.className} min-h-screen flex flex-col justify-between bg-[#0e0e0e]`}
       >
-        {/* <div className="min-h-screen flex flex-col bg-[#0e0e0e]">
-
-        </div> */}
         <Header />
-        <main>{children}</main>
+        <main className="">{children}</main>
         <Footer />
       </body>
     </html>
