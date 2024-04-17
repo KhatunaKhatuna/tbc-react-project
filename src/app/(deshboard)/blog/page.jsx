@@ -19,7 +19,7 @@ export default async function Blog() {
   return (
     <section className="mb-[3rem]">
       <div className="max-w-[80%] my-0 mx-auto bg-[#2D2E35] rounded-3xl py-[2rem]">
-        <h2 className="text-[3rem] text-[#060607] text-center">Blog</h2>
+        <h2 className="text-[3rem] text-[#6B72FE] text-center">Blog</h2>
         <div className=" flex flex-col gap-14">
           {posts?.map((article) => (
             <Article key={article.id} article={article} />

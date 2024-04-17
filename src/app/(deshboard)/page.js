@@ -1,7 +1,6 @@
 "use client";
 import Search from "@/components/Search";
 import ProductsList from "@/components/ProdactsList";
-// import Blog from "./blog/page";
 import { useState } from "react";
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
         setSearchQuery={setSearchQuery}
       />
       <ProductsList isSorted={isSorted} searchQuery={searchQuery} />
-      {/* <Blog quantity={5} /> */}
     </>
   );
 }
