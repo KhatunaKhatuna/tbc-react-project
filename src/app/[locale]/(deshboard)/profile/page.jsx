@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-
+import { useLocale } from "next-intl";
 export default function Profile() {
+  const locale = useLocale();
   const [form, setForm] = useState({
     firstname: "",
     lastname: "",
@@ -33,15 +34,15 @@ export default function Profile() {
     <section className="text-[#fdf2e9]  flex-1 flex  justify-center items-center ">
       <div className="flex gap-5 flex-col justify-center items-center max-w-[80%] my-0 mx-auto">
         <div className="bg-[#2D2E35] px-[2rem] py-[1rem] rounded-3xl">
-          <h2 className="text-[2rem] leading-[25px] text-center pb-[1rem] ">
-            Edit Your Profile Data
+          <h2 className="text-[24px] leading-[25px] text-center pb-[1rem] ">
+            {locale === "en" ? "Your Profile Data" : "პროფილის მონაცემები"}
           </h2>
           <form className="grid grid-cols-1 gap-4">
             <input
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
               maxLength="100"
               name="firstname"
-              placeholder="Firstname"
+              placeholder={locale === "en" ? "Firstname" : "სახელი"}
               type="text"
               autoCapitalize="none"
               autoComplete="off"
@@ -54,7 +55,7 @@ export default function Profile() {
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
               maxLength="100"
               name="lastname"
-              placeholder="Lastname"
+              placeholder={locale === "en" ? "Lastname" : "გვარი"}
               type="text"
               autoCapitalize="none"
               autoComplete="off"
@@ -66,7 +67,7 @@ export default function Profile() {
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
               maxLength="100"
               name="email"
-              placeholder="Email"
+              placeholder={locale === "en" ? "Email" : "იმეილი"}
               type="text"
               autoCapitalize="none"
               autoComplete="off"
@@ -78,7 +79,7 @@ export default function Profile() {
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
               maxLength="100"
               name="mobile"
-              placeholder="Mobile"
+              placeholder={locale === "en" ? "Mobile" : "მობილური"}
               type="text"
               autoCapitalize="none"
               autoComplete="off"
@@ -90,7 +91,9 @@ export default function Profile() {
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
               maxLength="100"
               name="currentPassword"
-              placeholder="Current Password"
+              placeholder={
+                locale === "en" ? "Current Password" : "მიმდინარე პაროლი"
+              }
               type="password"
               autoCapitalize="none"
               autoComplete="off"
@@ -103,7 +106,7 @@ export default function Profile() {
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
               maxLength="100"
               name="newPassword"
-              placeholder="New Password"
+              placeholder={locale === "en" ? "New Password" : "ახალი პაროლი"}
               type="password"
               autoCapitalize="none"
               autoComplete="off"
@@ -116,7 +119,11 @@ export default function Profile() {
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
               maxLength="100"
               name="confirmNewPassword"
-              placeholder="Confirm New Password"
+              placeholder={
+                locale === "en"
+                  ? "Confirm New Password"
+                  : "დადასტურეთ ახალი პაროლი"
+              }
               type="password"
               autoCapitalize="none"
               autoComplete="off"
@@ -127,10 +134,10 @@ export default function Profile() {
             />
             <div className="flex gap-3">
               <button className=" w-full  border-0 bg-[#fdf2e9] py-1.5 mx-auto text-[#2D2E35] lg:text-[20px] rounded-[5px] hover:bg-[#bc4848] transition-all transform duration-300 ease-linear">
-                Cancel
+                {locale === "en" ? "Cancel" : "გაუქმება"}
               </button>
               <button className=" w-full  border-0 bg-[#6B72FE] py-1.5 mx-auto text-[#fdf2e9] lg:text-[20px] rounded-[5px] hover:bg-[#333B61] transition-all transform duration-300 ease-linear">
-                Save
+                {locale === "en" ? "Save" : "შენახვა"}
               </button>
             </div>
           </form>

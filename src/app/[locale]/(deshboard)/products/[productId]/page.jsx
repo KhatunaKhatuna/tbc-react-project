@@ -1,4 +1,16 @@
 import Image from "next/image";
+import { unstable_setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+
+export async function generateStaticParams() {
+  const response = await fetch("https://dummyjson.com/products");
+  const data = await response.json();
+  const paths = data.products.map((product) => ({
+    id: `${product.id}`,
+  }));
+  return paths;
+}
 
 const fetchData = async (id) => {
   try {
@@ -14,9 +26,12 @@ const fetchData = async (id) => {
 };
 
 const ProductDetails = async ({ params }) => {
+  unstable_setRequestLocale(params.locale);
+
   const productId = params.productId;
   const productData = await fetchData(productId);
-
+  // const t = useTranslations("Index");
+  const locale = useLocale();
   return (
     <section>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20  max-w-[80%] mx-auto my-0 ">
@@ -34,25 +49,25 @@ const ProductDetails = async ({ params }) => {
             />
           </div>
         </div>
-        <div className="flex flex-col gap-4 justify-center *:text-[#fdf2e9]  *:text-[14px] lg:*:text-[16px] [&_span]:text-[#6B72FE]  [&_span]:text-[16px] [&_span]:lg:text-[22px]">
+        <div className="flex flex-col gap-4 justify-center *:text-[#0e0e0e]  dark:*:text-[#fdf2e9]  *:text-[14px] lg:*:text-[16px] [&_span]:text-[#6B72FE]  [&_span]:text-[16px] [&_span]:lg:text-[22px]">
           <p>
-            <span>Category: </span>
+            <span>{locale === "en" ? "Category" : "კატეგორია"}: </span>
             {productData?.category}
           </p>
           <p>
-            <span>Brand: </span>
+            <span>{locale === "en" ? "Brand" : "ბრენდი"}: </span>
             {productData?.brand}
           </p>
           <p>
-            <span>Description: </span>
+            <span>{locale === "en" ? "Description" : "აღწერა"}: </span>
             {productData?.description}
           </p>
           <p>
-            <span>Price: </span>
+            <span>{locale === "en" ? "Price" : "ფასი"}: </span>
             {productData?.price} &euro;
           </p>
           <p>
-            <span>In Stock: </span>
+            <span>{locale === "en" ? "In Stock" : "მარაგში"}: </span>
             {productData?.stock}
           </p>
         </div>
