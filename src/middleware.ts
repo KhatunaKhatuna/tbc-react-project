@@ -14,7 +14,7 @@ const protectedRoutes = [
 
 const publicRoutes = ["/login", "/ka/login", "/en/login"];
 
-export default async function middleware(request) {
+export default async function middleware(request: NextRequest) {
   //Middleware for rout protections
   const cookie = request.cookies.get(AUTH_COOKIE_KEY)?.value;
   let token = null;

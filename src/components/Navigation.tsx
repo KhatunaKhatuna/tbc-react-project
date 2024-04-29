@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-export default function Navigation({ style }) {
+export default function Navigation({ style }: { style: string }) {
   const t = useTranslations("Index");
   return (
     <nav className="">

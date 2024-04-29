@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
-import { AUTH_COOKIE_KEY } from "@/costants";
-import LoginForm from "@/components/LoginForm";
-import LoginErrorMessage from "@/components/LoginErrorMessage";
+import { AUTH_COOKIE_KEY } from "../../../costants";
+import LoginForm from "../../../components/LoginForm";
+import LoginErrorMessage from "../../../components/LoginErrorMessage";
 export const dynamic = "force-dynamic";
 import DarkMode from "../../../components/DarkMode";
 import LangSwitcher from "../../../components/LangSwitcher";
@@ -11,7 +11,7 @@ import LangSwitcher from "../../../components/LangSwitcher";
 export default async function LoginPage() {
   const cookieStore = cookies();
   const cookie = cookieStore.get(AUTH_COOKIE_KEY);
-  let message = null;
+  let message: string | null = null;
   if (cookie?.value) {
     const cookieObj = JSON.parse(cookie.value);
     if (cookieObj?.message) {

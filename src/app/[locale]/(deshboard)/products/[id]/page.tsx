@@ -1,18 +1,18 @@
 import Image from "next/image";
 import { unstable_setRequestLocale } from "next-intl/server";
-import { useTranslations } from "next-intl";
+
 import { useLocale } from "next-intl";
 
 export async function generateStaticParams() {
   const response = await fetch("https://dummyjson.com/products");
   const data = await response.json();
-  const paths = data.products.map((product) => ({
-    productId: `${product.id}`,
+  const paths = data.products.map((product: product) => ({
+    id: `${product.id}`,
   }));
   return paths;
 }
 
-const fetchData = async (id) => {
+const fetchData = async (id: number) => {
   try {
     const response = await fetch(`https://dummyjson.com/products/${id}`);
     if (!response.ok) {
@@ -25,10 +25,11 @@ const fetchData = async (id) => {
   }
 };
 
-const ProductDetails = async ({ params }) => {
+const ProductDetails = async ({ params }: paramsObj) => {
   unstable_setRequestLocale(params.locale);
 
-  const productId = params.productId;
+  const productId = params.id;
+
   const productData = await fetchData(productId);
   // const t = useTranslations("Index");
   const locale = useLocale();

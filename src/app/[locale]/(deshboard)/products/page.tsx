@@ -1,4 +1,4 @@
-import ProductsList from "@/components/ProdactsList";
+import ProductsList from "../../../../components/ProdactsList";
 import { useLocale } from "next-intl";
 
 export default function Products() {

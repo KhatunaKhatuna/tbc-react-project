@@ -1,6 +1,6 @@
 "use client";
-import Card from "@/components/Card";
-import useDebounce from "@/hooks/useDebounce";
+import Card from "./Card";
+import useDebounce from "../hooks/useDebounce";
 import { useEffect, useState } from "react";
 
 // const cards = [
@@ -127,7 +127,7 @@ import { useEffect, useState } from "react";
 // ];
 
 export default function ProductsList({ isSorted = false, searchQuery = "" }) {
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState<product[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {

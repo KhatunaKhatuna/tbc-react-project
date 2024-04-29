@@ -23,7 +23,7 @@ export default function Profile() {
     confirmNewPassword,
   } = form;
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setForm((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
@@ -40,7 +40,7 @@ export default function Profile() {
           <form className="grid grid-cols-1 gap-4">
             <input
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
-              maxLength="100"
+              maxLength={100}
               name="firstname"
               placeholder={locale === "en" ? "Firstname" : "სახელი"}
               type="text"
@@ -53,7 +53,7 @@ export default function Profile() {
 
             <input
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
-              maxLength="100"
+              maxLength={100}
               name="lastname"
               placeholder={locale === "en" ? "Lastname" : "გვარი"}
               type="text"
@@ -65,7 +65,7 @@ export default function Profile() {
             />
             <input
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
-              maxLength="100"
+              maxLength={100}
               name="email"
               placeholder={locale === "en" ? "Email" : "იმეილი"}
               type="text"
@@ -77,7 +77,7 @@ export default function Profile() {
             />
             <input
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
-              maxLength="100"
+              maxLength={100}
               name="mobile"
               placeholder={locale === "en" ? "Mobile" : "მობილური"}
               type="text"
@@ -89,7 +89,7 @@ export default function Profile() {
             />
             <input
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
-              maxLength="100"
+              maxLength={100}
               name="currentPassword"
               placeholder={
                 locale === "en" ? "Current Password" : "მიმდინარე პაროლი"
@@ -104,7 +104,7 @@ export default function Profile() {
             />
             <input
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
-              maxLength="100"
+              maxLength={100}
               name="newPassword"
               placeholder={locale === "en" ? "New Password" : "ახალი პაროლი"}
               type="password"
@@ -117,7 +117,7 @@ export default function Profile() {
             />
             <input
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
-              maxLength="100"
+              maxLength={100}
               name="confirmNewPassword"
               placeholder={
                 locale === "en"

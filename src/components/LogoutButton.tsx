@@ -1,6 +1,6 @@
 "use client";
 import { useLocale } from "next-intl";
-export default function LogoutButton({ handleLogout }) {
+export default function LogoutButton() {
   const locale = useLocale();
   return (
     <form action="/api" method="GET">

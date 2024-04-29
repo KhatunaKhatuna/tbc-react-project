@@ -2,15 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "./Navigation";
 import LogoutButton from "./LogoutButton";
-import { logOut } from "@/app/actions";
+// import { logOut } from "@/app/actions";
 import LangSwitcher from "./LangSwitcher";
 import DarkMode from "./DarkMode";
 
 export default function Header() {
-  async function handleLogout() {
-    "use server";
-    await logOut();
-  }
+  // async function handleLogout() {
+  //   "use server";
+  //   await logOut();
+  // }
   return (
     <header className=" bg-[#D1D1D1] dark:bg-[rgb(25,25,25)]/95 sticky top-0 z-10">
       <div className="flex items-center justify-between max-w-[80%] my-0 mx-auto py-[0.5rem]">
@@ -24,10 +24,10 @@ export default function Header() {
           />
         </Link>
         <div className="flex gap-5 items-center">
-          <Navigation />
+          <Navigation style="flex-row" />
           <LangSwitcher />
           <DarkMode />
-          <LogoutButton handleLogout={handleLogout} />
+          <LogoutButton />
         </div>
       </div>
     </header>

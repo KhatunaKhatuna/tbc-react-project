@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from "next-intl";
-export default function Card({ card: { id, description, title, images } }) {
+export default function Card({
+  card: { id, description, title, images },
+}: cardProps) {
   const locale = useLocale();
   const img = images[0];
   return (

@@ -1,6 +1,6 @@
 "use client";
-import Search from "@/components/Search";
-import ProductsList from "@/components/ProdactsList";
+import Search from "../../../components/Search";
+import ProductsList from "../../../components/ProdactsList";
 import { useState } from "react";
 
 export default function Home() {

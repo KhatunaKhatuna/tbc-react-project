@@ -35,7 +35,7 @@ export default function LoginForm() {
           <form action="/api" method="POST" className="grid grid-cols-1 gap-4">
             <input
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
-              maxLength="100"
+              maxLength={100}
               name="username"
               placeholder="Username"
               type="text"
@@ -48,7 +48,7 @@ export default function LoginForm() {
 
             <input
               className="w-full p-1.5 text-[#0e0e0e]/95 rounded-[5px]  focus:border-[#6B72FE] focus:outline-[#6B72FE]"
-              maxLength="100"
+              maxLength={100}
               name="password"
               placeholder="Password"
               type="password"

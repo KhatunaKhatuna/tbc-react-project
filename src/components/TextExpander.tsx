@@ -8,9 +8,9 @@ export default function TextExpander({
   colapsButtonText = "Show less",
   buttonColor = "#1f09cd",
   expanded = false,
-  calssName,
+  className,
   marginLeft = "10px",
-}) {
+}: TextExpanderProps) {
   const [isExpanded, setIsExpanded] = useState(expanded);
   const displayText = isExpanded
     ? children
@@ -26,7 +26,7 @@ export default function TextExpander({
   };
 
   return (
-    <div className={calssName}>
+    <div className={className}>
       <span>{displayText}</span>
       <button onClick={() => setIsExpanded((exp) => !exp)} style={buttonStyle}>
         {isExpanded ? colapsButtonText : expandButtonText}
