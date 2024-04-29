@@ -4,7 +4,9 @@ import Link from "next/link";
 
 import { useLocale } from "next-intl";
 
-export default function Article({ article: { id, title, body } }) {
+export default function Article({
+  article: { id, title, body },
+}: articleProps) {
   const locale = useLocale();
   const createDate = "28.03.2024";
   const image = "/logo.svg";

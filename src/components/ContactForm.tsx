@@ -10,9 +10,9 @@ export default function ContactForm() {
     mobile: "",
     email: "",
   });
-  const [subscribers, setSubscribers] = useState([]);
+  const [subscribers, setSubscribers] = useState<form[]>([]);
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     // [e.target.name] here name is inputs name
     /*
     setForm({
@@ -27,11 +27,11 @@ export default function ContactForm() {
     }));
   }
 
-  function handleAddsubscribers(subscriber) {
+  function handleAddsubscribers(subscriber: form) {
     setSubscribers((subscribers) => [...subscribers, subscriber]);
   }
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     handleAddsubscribers(form);
     setForm({

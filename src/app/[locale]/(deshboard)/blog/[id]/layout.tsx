@@ -2,8 +2,8 @@ export async function generateStaticParams() {
   return [{ locale: "en" }, { locale: "ka" }];
 }
 
-const ProductsLayout = ({ children }) => {
+const BlogLayout: React.FC<childrenProps> = ({ children }) => {
   return <>{children}</>;
 };
 
-export default ProductsLayout;
+export default BlogLayout;

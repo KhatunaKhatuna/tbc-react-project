@@ -4,20 +4,20 @@ export default function Search({
   setIsSorted,
   setSearchQuery,
   searchQuery,
-}) {
+}: searchProps) {
   const locale = useLocale();
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
   }
   function handleClick() {
-    setIsSorted((prev) => !prev);
+    setIsSorted((prev: boolean) => !prev);
   }
 
   const pattern = /[^a-zA-Z0-9]/g;
   // set search query
-  function handleChange(e) {
-    setSearchQuery((prev) => (prev = e.target.value).replace(pattern, ""));
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setSearchQuery(e.target.value).replace(pattern, "");
   }
 
   return (

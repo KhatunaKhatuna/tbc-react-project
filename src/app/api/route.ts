@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { AUTH_COOKIE_KEY } from "../../costants";
 import { NextRequest } from "next/server";
 
-export async function POST(request) {
+export async function POST(request: NextRequest) {
   const formData = await request.formData();
   const response = await fetch("https://dummyjson.com/auth/login", {
     method: "POST",

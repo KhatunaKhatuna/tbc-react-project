@@ -4,11 +4,11 @@ import { unstable_setRequestLocale } from "next-intl/server";
 export async function generateStaticParams() {
   const response = await fetch("https://dummyjson.com/posts");
   const data = await response.json();
-  const paths = data.posts.map((post) => ({ postId: `${post.id}` }));
+  const paths = data.posts.map((post: post) => ({ id: `${post.id}` }));
   return paths;
 }
 
-const fetchData = async (id) => {
+const fetchData = async (id: number) => {
   try {
     const response = await fetch(`https://dummyjson.com/posts/${id}`);
     if (!response.ok) {
@@ -21,10 +21,10 @@ const fetchData = async (id) => {
   }
 };
 
-export default async function BlogPost({ params }) {
+export default async function BlogPost({ params }: paramsObj) {
   unstable_setRequestLocale(params.locale);
-  const postId = params.postId;
-  const postData = await fetchData(postId);
+  const postId = params.id;
+  const postData: post = await fetchData(postId);
   const createDate = "28.03.2024";
   const image = "/logo.svg";
 
