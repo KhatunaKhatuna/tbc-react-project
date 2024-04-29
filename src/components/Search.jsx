@@ -1,9 +1,12 @@
+import { useLocale } from "next-intl";
 export default function Search({
   isSorted,
   setIsSorted,
   setSearchQuery,
   searchQuery,
 }) {
+  const locale = useLocale();
+
   function handleSubmit(e) {
     e.preventDefault();
   }
@@ -21,15 +24,15 @@ export default function Search({
     <section className="flex flex-col md:flex-row items-center justify-center gap-10 p-[3rem] pb-0">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-[30rem] bg-[#fdf2e9]/10 flex  items-center py-[0.6rem] px-[1.6rem] rounded-full "
+        className="w-full max-w-[30rem] bg-[#D1D1D1] dark:bg-[#fdf2e9]/10  flex  items-center py-[0.6rem] px-[1.6rem] rounded-full "
       >
         <input
           value={searchQuery}
           onChange={handleChange}
           type="text"
           name="search"
-          placeholder="Search ..."
-          className="focus:border-transparent focus:outline-none bg-transparent text-[#fdf2e9] text-lg w-full placeholder:text-[#fdf2e9]"
+          placeholder={locale === "en" ? "Search..." : "ძებნა ..."}
+          className="focus:border-transparent focus:outline-none bg-transparent text-[#0e0e0e] dark:text-[#fdf2e9] text-lg w-full placeholder:text-[#0e0e0e]/60 dark:placeholder:text-[#fdf2e9]"
           autoCapitalize="none"
           autoComplete="off"
           spellCheck="false"
@@ -37,9 +40,15 @@ export default function Search({
       </form>
       <button
         onClick={handleClick}
-        className=" text-[#fdf2e9] bg-[#fdf2e9]/10 py-[0.6rem] px-[1.6rem] rounded-full w-[150px]"
+        className=" dark:text-[#fdf2e9] bg-[#6B72FE]  dark:bg-[#fdf2e9]/10 py-[0.7rem] px-[1.7rem] rounded-full w-[250px]"
       >
-        {isSorted ? "Reset" : "Sort by title"}
+        {isSorted
+          ? locale === "en"
+            ? "Reset"
+            : "გადატვირთვა"
+          : locale === "en"
+          ? "Sort by title"
+          : "დალაგება სათურით"}
       </button>
     </section>
   );

@@ -1,15 +1,22 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Navigation({ style }) {
+  const t = useTranslations("Index");
   return (
     <nav className="">
-      <ul className={"flex text-[#fdf2e9] gap-4 text-lg font-medium " + style}>
+      <ul
+        className={
+          "flex text-[#0e0e0e] dark:text-[#fdf2e9]  gap-4 text-lg font-medium " +
+          style
+        }
+      >
         <li>
           <Link
             href="/"
             className="hover:text-[#5262ac] transition duration-300"
           >
-            Home
+            {t("home")}
           </Link>
         </li>
         <li>
@@ -17,7 +24,7 @@ export default function Navigation({ style }) {
             href="/products"
             className="hover:text-[#5262ac] transition duration-300"
           >
-            Products
+            {t("products")}
           </Link>
         </li>
         <li>
@@ -25,7 +32,7 @@ export default function Navigation({ style }) {
             href="/contact"
             className="hover:text-[#5262ac] transition duration-300"
           >
-            Contact
+            {t("contact")}
           </Link>
         </li>
       </ul>
