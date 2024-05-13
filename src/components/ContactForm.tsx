@@ -11,7 +11,7 @@ export default function ContactForm() {
   //   email: "",
   // });
   // const [subscribers, setSubscribers] = useState<form[]>([]);
-  // console.log(subscribers);
+
   // function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
   // [e.target.name] here name is inputs name
   /*
