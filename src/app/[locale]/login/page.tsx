@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { AUTH_COOKIE_KEY } from "../../../costants";
+import { AUTH_COOKIE_KEY } from "../../../constants";
 import LoginForm from "../../../components/LoginForm";
 import LoginErrorMessage from "../../../components/LoginErrorMessage";
 export const dynamic = "force-dynamic";

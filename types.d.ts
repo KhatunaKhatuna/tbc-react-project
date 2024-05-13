@@ -68,3 +68,10 @@ interface form {
   mobile: string;
   email: string;
 }
+
+interface User {
+  id: number;
+  name: string;
+  age: string;
+  email: string;
+}
