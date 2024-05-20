@@ -23,6 +23,7 @@
     "brend": "Brand",
     "description": "Description",
     "price": "Price",
-    "inStock": "In Stock"
+    "inStock": "In Stock",
+    "admin": "Admin"
   }
 }

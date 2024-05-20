@@ -19,7 +19,7 @@ export default function DashboardLayout({ children }: childrenProps) {
   return (
     <>
       <Header />
-      <main className="">{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
     </>
   );

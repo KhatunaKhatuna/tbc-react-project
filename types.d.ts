@@ -12,7 +12,7 @@ interface articleProps {
   article: post;
 }
 // Prodacts
-interface product {
+interface productElement {
   id: number;
   title: string;
   description: string;
@@ -28,6 +28,7 @@ interface product {
 
 interface cardProps {
   card: productElement;
+  handleClick: (card: productElement) => void;
 }
 
 interface params {
@@ -74,4 +75,10 @@ interface User {
   name: string;
   age: string;
   email: string;
+}
+
+interface SelectedProduct {
+  id: number;
+  count: number;
+  selectedCard: productElement;
 }

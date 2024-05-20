@@ -6,7 +6,7 @@ import { useLocale } from "next-intl";
 export async function generateStaticParams() {
   const response = await fetch("https://dummyjson.com/products");
   const data = await response.json();
-  const paths = data.products.map((product: product) => ({
+  const paths = data.products.map((product: productElement) => ({
     id: `${product.id}`,
   }));
   return paths;

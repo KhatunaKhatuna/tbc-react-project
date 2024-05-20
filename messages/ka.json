@@ -23,6 +23,7 @@
     "brend": "ბრენდი",
     "description": "აღწერა",
     "price": "ფასი",
-    "inStock": "მარაგში"
+    "inStock": "მარაგში",
+    "admin": "ადმინი"
   }
 }
