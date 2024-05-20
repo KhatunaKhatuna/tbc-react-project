@@ -35,6 +35,22 @@ export default function Navigation({ style }: { style: string }) {
             {t("contact")}
           </Link>
         </li>
+        <li>
+          <Link
+            href="/blog"
+            className="hover:text-[#5262ac] transition duration-300"
+          >
+            {t("blog")}
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/admin"
+            className="hover:text-[#5262ac] transition duration-300"
+          >
+            {t("admin")}
+          </Link>
+        </li>
       </ul>
     </nav>
   );

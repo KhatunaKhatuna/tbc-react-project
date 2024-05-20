@@ -23,8 +23,9 @@ export default function Header() {
             height="100"
           />
         </Link>
+
+        <Navigation style="flex-row" />
         <div className="flex gap-5 items-center">
-          <Navigation style="flex-row" />
           <LangSwitcher />
           <DarkMode />
           <LogoutButton />
