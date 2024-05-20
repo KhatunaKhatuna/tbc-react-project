@@ -2,11 +2,10 @@ import Navigation from "./Navigation";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import SubscribtionForm from "./SubscribtionForm";
+import Year from "./Year";
 
 export default function Footer() {
   const t = useTranslations("Index");
-  const date = new Date();
-  const year = date.getFullYear();
 
   return (
     <footer className="bg-[#D1D1D1] dark:bg-[rgb(25,25,25)]/95 lg:bottom-0 lg:z-10 text-[#fdf2e9]">
@@ -16,7 +15,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-[2px] text-lg  text-[16px] text-[#0e0e0e] dark:text-[#fdf2e9]   font-medium">
               <li>
                 <span className="hover:text-[#5262ac] transition duration-300">
-                  React Accelerator {year}
+                  React Accelerator <Year />
                 </span>
               </li>
               <li>
