@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,11 +15,13 @@ export default function RootLayout({
 }: childrenProps) {
   return (
     <html lang={locale}>
-      <body
-        className={`${inter.className} text-[#0e0e0e] dark:text-white  bg-[#f6f6f6] dark:bg-[#0e0e0e]  min-h-screen flex flex-col justify-between `}
-      >
-        {children}
-      </body>
+      <UserProvider>
+        <body
+          className={`${inter.className} text-[#0e0e0e] dark:text-white  bg-[#f6f6f6] dark:bg-[#0e0e0e]  min-h-screen flex flex-col justify-between `}
+        >
+          {children}
+        </body>
+      </UserProvider>
     </html>
   );
 }

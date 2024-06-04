@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "./Navigation";
-import LogoutButton from "./LogoutButton";
+// import LogoutButton from "./LogoutButton";
 // import { logOut } from "@/app/actions";
 import LangSwitcher from "./LangSwitcher";
 import DarkMode from "./DarkMode";
@@ -28,7 +28,9 @@ export default function Header() {
         <div className="flex gap-5 items-center">
           <LangSwitcher />
           <DarkMode />
-          <LogoutButton />
+          {/* <LogoutButton /> */}
+          <a href="/api/auth/login">Login</a>
+          <a href="/api/auth/logout">Logout</a>
         </div>
       </div>
     </header>

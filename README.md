@@ -5,7 +5,7 @@ git clone git@github.com:KhatunaKhatuna/tbc-react-project.git
 ```
 
 ```
-cd tbc-react-accelerartor
+cd tbc-react-project
 ```
 
 ```
