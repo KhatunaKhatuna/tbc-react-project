@@ -17,7 +17,6 @@ export async function createUser(name: string, email: string, age: string) {
 }
 
 export async function deleteUser(id: number) {
-  "use server";
   await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/delete-user/${id}`, {
     method: "DELETE",
   });
@@ -78,6 +77,22 @@ export async function editProfile(
     {
       method: "POST",
       body: JSON.stringify({ name, email, userSub }),
+    }
+  );
+}
+
+export async function uploadUserPicture(url: string, sub: string) {
+  return await fetch(
+    `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/upload-user-picture`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        blobUrl: url,
+        userSub: sub,
+      }),
     }
   );
 }
