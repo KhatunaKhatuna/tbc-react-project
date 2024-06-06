@@ -82,3 +82,9 @@ interface SelectedProduct {
   count: number;
   selectedCard: productElement;
 }
+
+export interface ProfileData {
+  email: string;
+  userSub: string;
+  name: string;
+}

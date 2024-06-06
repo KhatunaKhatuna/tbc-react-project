@@ -1,7 +1,7 @@
 "use server";
 import { revalidatePath } from "next/cache";
-import { createUser, deleteUser, updateUser } from "./api";
-
+import { createUser, deleteUser, updateUser, editProfile } from "./api";
+import { ProfileData } from "../../types";
 // import { cookies } from "next/headers";
 // import { AUTH_COOKIE_KEY } from "@/costants";
 // import { redirect } from "next/navigation";
@@ -47,4 +47,10 @@ export async function updateUserAction(formData: FormData) {
   const { id, name, email, age } = Object.fromEntries(formData);
   updateUser(id as string, name as string, email as string, age as string);
   revalidatePath("/admin");
+}
+
+export async function editProfileInfo(formData: ProfileData) {
+  const { name, email, userSub } = formData;
+  revalidatePath("/profile");
+  editProfile(name, email, userSub);
 }
