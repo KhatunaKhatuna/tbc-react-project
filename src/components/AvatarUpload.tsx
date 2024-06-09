@@ -29,6 +29,10 @@ export default function AvatarUploadPage({ userImage }: { userImage: string }) {
       } catch (error) {
         console.error("Error updating user picture:", error);
       }
+      // Reset the inputFileRef to null by setting the value to an empty string
+      if (inputFileRef.current) {
+        inputFileRef.current.value = "";
+      }
     };
 
     setLoader(false);
@@ -133,13 +137,14 @@ export default function AvatarUploadPage({ userImage }: { userImage: string }) {
             onChange={handleImageChange}
           />
         </div>
-
-        <button
-          className="bg-blue-500 w-32 text-white text-[12px] py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
-          type="submit"
-        >
-          Upload
-        </button>
+        {inputFileRef?.current?.files?.length! > 0 && (
+          <button
+            className="bg-blue-500 w-32 text-white text-[12px] py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+            type="submit"
+          >
+            Upload
+          </button>
+        )}
       </form>
     </>
   );
