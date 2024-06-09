@@ -1,7 +1,7 @@
 import TextExpander from "./TextExpander";
 import Image from "next/image";
 import Link from "next/link";
-
+import { articleProps } from "../../types";
 import { useLocale } from "next-intl";
 
 export default function Article({

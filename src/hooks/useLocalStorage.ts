@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { SelectedProduct } from "../../types";
 
 export function useLocalStorage(
   key: string,

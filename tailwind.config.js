@@ -11,6 +11,9 @@ module.exports = {
       colors: {
         "darck-blue": "#090918",
       },
+      gridTemplateColumns: {
+        "profile-form": "40fr 60fr",
+      },
     },
   },
   plugins: [],

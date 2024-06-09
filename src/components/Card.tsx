@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from "next-intl";
-
+import { cardProps } from "../../types";
 export default function Card({
   // card: { id, description, title, images },
   card,

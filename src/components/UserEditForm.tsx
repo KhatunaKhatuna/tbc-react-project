@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import { updateUserAction } from "../app/actions";
 import { useState } from "react";
+import { User } from "../../types";
 export default function UserEditForm({
   setOpenModal,
   user,

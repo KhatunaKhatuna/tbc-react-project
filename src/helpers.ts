@@ -1,3 +1,4 @@
+import { SelectedProduct, productElement } from "../types";
 const initialState: SelectedProduct[] = [];
 type Action =
   | { type: "INCREMENT"; payload: productElement }
@@ -41,7 +42,7 @@ export function reducer(state: SelectedProduct[], action: Action) {
         count: SelectedProduct.count - 1,
       };
       clone[SelectedProductIdx] = updatedSelectedProduct;
-      if(clone[SelectedProductIdx].count === 0) {
+      if (clone[SelectedProductIdx].count === 0) {
         return state.filter((product) => product.id !== action.payload.id);
       }
       return clone;

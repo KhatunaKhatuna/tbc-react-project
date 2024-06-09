@@ -1,6 +1,6 @@
 import Article from "../../../../components/Article";
 import { useLocale } from "next-intl";
-
+import { post } from "../../../../../types";
 const fetchData = async () => {
   try {
     const response = await fetch("https://dummyjson.com/posts");

@@ -3,6 +3,7 @@ import Footer from "../../../components/Footer";
 // import { cookies } from "next/headers";
 // import { AUTH_COOKIE_KEY } from "@/costants";
 // import { redirect } from "next/navigation";
+import { childrenProps } from "../../../../types";
 
 export default function DashboardLayout({ children }: childrenProps) {
   // const cookieStore = cookies();

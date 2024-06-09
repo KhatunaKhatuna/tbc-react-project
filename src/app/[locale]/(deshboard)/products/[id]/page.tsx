@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { unstable_setRequestLocale } from "next-intl/server";
-
+import { productElement, paramsObj } from "../../../../../../types";
 import { useLocale } from "next-intl";
 
 export async function generateStaticParams() {

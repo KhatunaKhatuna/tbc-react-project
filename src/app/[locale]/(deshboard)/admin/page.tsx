@@ -2,7 +2,7 @@ import { getUsers } from "../../../api";
 import DeleteUser from "../../../../components/DeleteUser";
 import UserCreateButton from "../../../../components/UserCreateButton";
 import UserEditButton from "../../../../components/UserEditButton";
-
+import { User } from "../../../../../types";
 export default async function AdminPage() {
   const users = await getUsers();
 

@@ -6,7 +6,7 @@ import { useLocale } from "next-intl";
 import Cart from "./Cart";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { reducer } from "../helpers";
-
+import { productElement } from "../../types";
 export default function ProductsList({ isSorted = false, searchQuery = "" }) {
   const locale = useLocale();
 

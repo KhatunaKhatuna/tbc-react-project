@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import UserEditForm from "./UserEditForm";
-
+import { User } from "../../types";
 const UserEditButton = ({ user }: { user: User }) => {
   const [openModal, setOpenModal] = useState(false);
 

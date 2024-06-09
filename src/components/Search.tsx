@@ -1,4 +1,5 @@
 import { useLocale } from "next-intl";
+import { searchProps } from "../../types";
 export default function Search({
   isSorted,
   setIsSorted,

@@ -4,7 +4,7 @@ import { useLocalStorage } from "../../../../hooks/useLocalStorage";
 import { useLocale } from "next-intl";
 import Image from "next/image";
 import { reducer } from "../../../../helpers";
-
+import { productElement, SelectedProduct } from "../../../../../types";
 export default function CheckoutPage() {
   const locale = useLocale();
 

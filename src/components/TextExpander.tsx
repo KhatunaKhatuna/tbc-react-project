@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import { TextExpanderProps } from "../../types";
 export default function TextExpander({
   children,
   collapsedNumWords = 10,
